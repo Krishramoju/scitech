@@ -8,13 +8,25 @@ import Consultations from '../components/Consultations';
 function SellerDashboard() {
   const [currentTab, setTab] = useState('items');
 
+  const renderTabContent = () => {
+    switch (currentTab) {
+      case 'items':
+        return <ItemListing />;
+      case 'commissions':
+        return <Commissions />;
+      case 'workshops':
+        return <Workshops />;
+      case 'consultations':
+        return <Consultations />;
+      default:
+        return <ItemListing />;
+    }
+  };
+
   return (
-    <div>
+    <div className="seller-dashboard">
       <Tabs currentTab={currentTab} setTab={setTab} />
-      {currentTab === 'items' && <ItemListing />}
-      {currentTab === 'commissions' && <Commissions />}
-      {currentTab === 'workshops' && <Workshops />}
-      {currentTab === 'consultations' && <Consultations />}
+      {renderTabContent()}
     </div>
   );
 }
