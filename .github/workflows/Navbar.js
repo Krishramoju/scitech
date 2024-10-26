@@ -4,8 +4,10 @@ import '../styles/Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <h1>Art Marketplace</h1>
-      <button>Logout</button>
+      <h1>Artify Marketplace</h1>
+      <div className="nav-links">
+        <button className="logout-btn">Logout</button>
+      </div>
     </nav>
   );
 }
