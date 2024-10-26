@@ -1,0 +1,32 @@
+.item-listing {
+  padding: 20px;
+}
+
+.item-listing h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.add-item-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item-card {
+  background-color: #fff;
+  padding: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 150px;
+}
