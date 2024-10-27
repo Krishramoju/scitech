@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artify Marketplace</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your global CSS file -->
+    <link rel="stylesheet" href="Navbar.css"> <!-- Link to the specific Navbar styles -->
+    <style>
+        /* Optional: Inline styles for demonstration purposes */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background-color: #282c34;
+            color: white;
+        }
+        .nav-links {
+            display: flex;
+        }
+        .logout-btn {
+            padding: 10px 15px;
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .logout-btn:hover {
+            background-color: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Artify Marketplace</h1>
+        <div class="nav-links">
+            <button class="logout-btn">Logout</button>
+        </div>
+    </nav>
+
+    <script src="Navbar.js" type="module"></script> <!-- Link to your JavaScript file, if needed -->
+</body>
+</html>
