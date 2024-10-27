@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Items Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your global CSS file -->
+    <style>
+        /* Optional: Inline styles for demonstration purposes */
+        .item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px 0;
+        }
+        .filter-option {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h2>Item Filter</h2>
+        <div class="filters">
+            <div class="filter-option">
+                <label>
+                    <input type="checkbox" value="category1"> Category 1
+                </label>
+            </div>
+            <div class="filter-option">
+                <label>
+                    <input type="checkbox" value="category2"> Category 2
+                </label>
+            </div>
+            <div class="filter-option">
+                <label>
+                    <input type="checkbox" value="category3"> Category 3
+                </label>
+            </div>
+        </div>
+
+        <div class="items-list">
+            <div class="item" data-category="category1">Item 1 - Category 1</div>
+            <div class="item" data-category="category2">Item 2 - Category 2</div>
+            <div class="item" data-category="category1">Item 3 - Category 1</div>
+            <div class="item" data-category="category3">Item 4 - Category 3</div>
+            <div class="item" data-category="category2">Item 5 - Category 2</div>
+        </div>
+    </div>
+
+    <script src="Filter.js" type="module"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
