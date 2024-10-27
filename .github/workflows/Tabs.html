@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Example</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your global CSS file -->
+    <style>
+        /* Inline styles for demonstration purposes */
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab-button {
+            flex: 1;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-bottom: none; /* Prevents double border with content */
+        }
+        .tab-button.active-tab {
+            background: white;
+            font-weight: bold;
+            color: #333; /* Active tab color */
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button active-tab" data-tab="items">Items</button>
+        <button class="tab-button" data-tab="commissions">Commissions</button>
+        <button class="tab-button" data-tab="workshops">Workshops</button>
+        <button class="tab-button" data-tab="consultations">Consultations</button>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.tab-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active-tab'));
+                button.classList.add('active-tab');
+                
+                const activeTab = button.getAttribute('data-tab');
+                // Logic to display the content for the active tab can be added here
+                console.log(`Active Tab: ${activeTab}`);
+            });
+        });
+    </script>
+</body>
+</html>
