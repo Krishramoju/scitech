@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artify Marketplace - Notifications</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your global CSS file -->
+    <link rel="stylesheet" href="Notifications.css"> <!-- Link to the specific Notifications styles -->
+    <style>
+        /* Optional: Inline styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .notification-icon {
+            cursor: pointer;
+            position: relative;
+            margin: 20px;
+            font-size: 24px;
+        }
+        .notification-sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px; /* Hidden by default */
+            width: 300px;
+            height: 100%;
+            background-color: #f9f9f9;
+            box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .notification-sidebar.open {
+            right: 0; /* Slide in */
+        }
+        .notification-container {
+            padding: 20px;
+        }
+        .notification-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification-icon">🔔</div>
+    
+    <div class="notification-sidebar">
+        <div class="notification-container">
+            <!-- Notifications will be dynamically added here -->
+        </div>
+    </div>
+
+    <script src="Notifications.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
