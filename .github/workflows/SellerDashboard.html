@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your global CSS file -->
+    <style>
+        /* Optional: Inline styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .seller-dashboard {
+            max-width: 800px;
+            margin: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-bottom: none; /* Prevents double border with content */
+        }
+        .tab.active {
+            background: white;
+            font-weight: bold;
+        }
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="seller-dashboard">
+        <div class="tabs">
+            <div class="tab active" data-tab="items">Item Listings</div>
+            <div class="tab" data-tab="commissions">Commissions</div>
+            <div class="tab" data-tab="workshops">Workshops</div>
+            <div class="tab" data-tab="consultations">Consultations</div>
+        </div>
+
+        <div class="tab-content">
+            <div class="item-listing">
+                <h2>Artwork Listings</h2>
+                <p>Post new artworks and set bidding times.</p>
+                <button class="add-item-btn">Add New Item</button>
+                <div class="item-grid">
+                    <div class="item-card">
+                        <h3>Item Title</h3>
+                        <p>Bidding Ends: 24 hours</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Similar structures for Commissions, Workshops, and Consultations -->
+            <div class="commissions" style="display: none;">
+                <h2>Commission Requests</h2>
+                <p>Accept and manage custom art requests from buyers.</p>
+                <div class="commission-container">
+                    <div class="commission-card">
+                        <h3>Commission Title</h3>
+                        <p>Description: Custom request details...</p>
+                        <button class="preview-btn">Generate Preview</button>
+                    </div>
+                </div>
+            </div>
+            <div class="workshops" style="display: none;">
+                <h2>Workshops</h2>
+                <p>Manage your workshops and bookings.</p>
+                <!-- Add workshop details here -->
+            </div>
+            <div class="consultations" style="display: none;">
+                <h2>Consultation Bookings</h2>
+                <p>Manage available times and view appointments.</p>
+                <button class="add-slot-btn">Add New Slot</button>
+                <div class="consultation-list">
+                    <div class="consultation-item">
+                        <h3>Consultation with Buyer</h3>
+                        <p>Time: 10:00 AM - 11:00 AM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = {
+            items: document.querySelector('.item-listing'),
+            commissions: document.querySelector('.commissions'),
+            workshops: document.querySelector('.workshops'),
+            consultations: document.querySelector('.consultations'),
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.getAttribute('data-tab');
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show/Hide content
+                Object.keys(contents).forEach(key => {
+                    contents[key].style.display = key === tabName ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
