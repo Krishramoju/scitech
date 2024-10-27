@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Marketplace API</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Inline styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Artist Marketplace API</h1>
+        <p>This API allows you to manage users and authenticate access to the marketplace.</p>
+        
+        <h2>API Endpoints</h2>
+        <ul>
+            <li><strong>GET /api/auth</strong> - Authentication related endpoints</li>
+            <li><strong>GET /api/users</strong> - User related endpoints</li>
+        </ul>
+
+        <h2>Try the API</h2>
+        <button onclick="fetchWelcomeMessage()">Fetch Welcome Message</button>
+        <div id="response"></div>
+    </div>
+
+    <script>
+        async function fetchWelcomeMessage() {
+            try {
+                const response = await fetch('http://localhost:5000/'); // Change the URL if your server runs on a different port
+                const message = await response.text();
+                document.getElementById('response').innerText = message;
+            } catch (error) {
+                document.getElementById('response').innerText = 'Error fetching message: ' + error;
+            }
+        }
+    </script>
+</body>
+</html>
