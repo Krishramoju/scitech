@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your global CSS file -->
+    <style>
+        /* Optional: Inline styles for demonstration purposes */
+        .favorite-icon {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 10px;
+            color: gray; /* Default color */
+        }
+        .favorite-icon.active {
+            color: gold; /* Color when active */
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h2>Your Favorite Items</h2>
+        <div class="favorites-list">
+            <div class="favorite-icon" title="Favorite Item 1">★</div>
+            <div class="favorite-icon" title="Favorite Item 2">★</div>
+            <div class="favorite-icon" title="Favorite Item 3">★</div>
+        </div>
+    </div>
+
+    <script src="Favorites.js" type="module"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
