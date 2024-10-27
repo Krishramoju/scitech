@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork Listings</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your global CSS file -->
+    <link rel="stylesheet" href="ItemListing.css"> <!-- Link to the specific ItemListing styles -->
+    <style>
+        /* Optional: Inline styles for demonstration purposes */
+        .item-listing {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+        .item-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f9f9f9;
+        }
+        .item-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .add-item-btn {
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-item-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="item-listing">
+            <h2>Artwork Listings</h2>
+            <p>Post new artworks and set bidding times.</p>
+            <button class="add-item-btn">Add New Item</button>
+            <div class="item-grid">
+                <div class="item-card">
+                    <h3>Item Title</h3>
+                    <p>Bidding Ends: 24 hours</p>
+                </div>
+                <!-- More item cards can be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="ItemListing.js" type="module"></script> <!-- Link to your JavaScript file, if needed -->
+</body>
+</html>
